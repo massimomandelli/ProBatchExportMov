@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ProBatchDataSet" targetNamespace="http://tempuri.org/ProBatchDataSet.xsd" xmlns:mstns="http://tempuri.org/ProBatchDataSet.xsd" xmlns="http://tempuri.org/ProBatchDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ProBatchExportMov.My.MySettings.GlobalReference.Default.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="V_MOVIMENTITableAdapter" GeneratorDataComponentClassName="V_MOVIMENTITableAdapter" Name="V_MOVIMENTI" UserDataComponentName="V_MOVIMENTITableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (MySettings)" DbObjectName="ProBatch.dbo.V_MOVIMENTI" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        REPPROD_NUMBER, PRODLINE_IDENT, RECIPE_IDENT, RECIPE_NAME, PROD_SETPOINT, PROD_ACTVALUE, SEQUENCE_NUMBER, BATCH_SETPOINT, 
+                         BATCH_ACTVALUE, BATCH_NUMBER, MAT_START_DATE, MAT_END_DATE, MAT_ABORT, MAT_SETPOINT, MAT_UNIT, MAT_ACTVALUE, MAT_IDENT, MAT_NAME, 
+                         MAT_BATCH_MODE, PROD_ABORT, BATCH_ABORT, WP_IDENT
+FROM            V_MOVIMENTI</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="REPPROD_NUMBER" DataSetColumn="REPPROD_NUMBER" />
+              <Mapping SourceColumn="PRODLINE_IDENT" DataSetColumn="PRODLINE_IDENT" />
+              <Mapping SourceColumn="RECIPE_IDENT" DataSetColumn="RECIPE_IDENT" />
+              <Mapping SourceColumn="RECIPE_NAME" DataSetColumn="RECIPE_NAME" />
+              <Mapping SourceColumn="PROD_SETPOINT" DataSetColumn="PROD_SETPOINT" />
+              <Mapping SourceColumn="PROD_ACTVALUE" DataSetColumn="PROD_ACTVALUE" />
+              <Mapping SourceColumn="SEQUENCE_NUMBER" DataSetColumn="SEQUENCE_NUMBER" />
+              <Mapping SourceColumn="BATCH_SETPOINT" DataSetColumn="BATCH_SETPOINT" />
+              <Mapping SourceColumn="BATCH_ACTVALUE" DataSetColumn="BATCH_ACTVALUE" />
+              <Mapping SourceColumn="BATCH_NUMBER" DataSetColumn="BATCH_NUMBER" />
+              <Mapping SourceColumn="MAT_START_DATE" DataSetColumn="MAT_START_DATE" />
+              <Mapping SourceColumn="MAT_END_DATE" DataSetColumn="MAT_END_DATE" />
+              <Mapping SourceColumn="MAT_ABORT" DataSetColumn="MAT_ABORT" />
+              <Mapping SourceColumn="MAT_SETPOINT" DataSetColumn="MAT_SETPOINT" />
+              <Mapping SourceColumn="MAT_UNIT" DataSetColumn="MAT_UNIT" />
+              <Mapping SourceColumn="MAT_ACTVALUE" DataSetColumn="MAT_ACTVALUE" />
+              <Mapping SourceColumn="MAT_IDENT" DataSetColumn="MAT_IDENT" />
+              <Mapping SourceColumn="MAT_NAME" DataSetColumn="MAT_NAME" />
+              <Mapping SourceColumn="MAT_BATCH_MODE" DataSetColumn="MAT_BATCH_MODE" />
+              <Mapping SourceColumn="PROD_ABORT" DataSetColumn="PROD_ABORT" />
+              <Mapping SourceColumn="BATCH_ABORT" DataSetColumn="BATCH_ABORT" />
+              <Mapping SourceColumn="WP_IDENT" DataSetColumn="WP_IDENT" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EXPORT_MOVIMENTITableAdapter" GeneratorDataComponentClassName="EXPORT_MOVIMENTITableAdapter" Name="EXPORT_MOVIMENTI" UserDataComponentName="EXPORT_MOVIMENTITableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (MySettings)" DbObjectName="ProBatch.dbo.EXPORT_MOVIMENTI" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [EXPORT_MOVIMENTI] ([REPPROD_NUMBER], [PRODLINE_IDENT], [RECIPE_IDENT], [RECIPE_NAME], [PROD_SETPOINT], [PROD_ACTVALUE], [SEQUENCE_NUMBER], [BATCH_SETPOINT], [BATCH_ACTVALUE], [BATCH_NUMBER], [PROD_ABORT], [BATCH_ABORT], [MAT_ABORT], [MAT_START_DATE], [MAT_END_DATE], [MAT_SETPOINT], [MAT_ACTVALUE], [MAT_UNIT], [CODICE], [MAT_IDENT], [MAT_NAME], [WP_IDENT], [MAT_BATCH_MODE]) VALUES (@REPPROD_NUMBER, @PRODLINE_IDENT, @RECIPE_IDENT, @RECIPE_NAME, @PROD_SETPOINT, @PROD_ACTVALUE, @SEQUENCE_NUMBER, @BATCH_SETPOINT, @BATCH_ACTVALUE, @BATCH_NUMBER, @PROD_ABORT, @BATCH_ABORT, @MAT_ABORT, @MAT_START_DATE, @MAT_END_DATE, @MAT_SETPOINT, @MAT_ACTVALUE, @MAT_UNIT, @CODICE, @MAT_IDENT, @MAT_NAME, @WP_IDENT, @MAT_BATCH_MODE)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@REPPROD_NUMBER" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="REPPROD_NUMBER" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@PRODLINE_IDENT" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="PRODLINE_IDENT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@RECIPE_IDENT" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="RECIPE_IDENT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@RECIPE_NAME" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="RECIPE_NAME" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@PROD_SETPOINT" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="PROD_SETPOINT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@PROD_ACTVALUE" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="PROD_ACTVALUE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SEQUENCE_NUMBER" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SEQUENCE_NUMBER" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@BATCH_SETPOINT" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="BATCH_SETPOINT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@BATCH_ACTVALUE" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="BATCH_ACTVALUE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="@BATCH_NUMBER" Precision="0" ProviderType="SmallInt" Scale="0" Size="0" SourceColumn="BATCH_NUMBER" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@PROD_ABORT" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="PROD_ABORT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@BATCH_ABORT" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="BATCH_ABORT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@MAT_ABORT" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="MAT_ABORT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@MAT_START_DATE" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="MAT_START_DATE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@MAT_END_DATE" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="MAT_END_DATE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@MAT_SETPOINT" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="MAT_SETPOINT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@MAT_ACTVALUE" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="MAT_ACTVALUE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@MAT_UNIT" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="MAT_UNIT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@CODICE" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CODICE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@MAT_IDENT" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="MAT_IDENT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@MAT_NAME" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="MAT_NAME" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@WP_IDENT" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="WP_IDENT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@MAT_BATCH_MODE" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="MAT_BATCH_MODE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        REPPROD_NUMBER, PRODLINE_IDENT, RECIPE_IDENT, RECIPE_NAME, PROD_SETPOINT, PROD_ACTVALUE, SEQUENCE_NUMBER, BATCH_SETPOINT, 
+                         BATCH_ACTVALUE, BATCH_NUMBER, PROD_ABORT, BATCH_ABORT, MAT_ABORT, MAT_START_DATE, MAT_END_DATE, MAT_SETPOINT, MAT_ACTVALUE, 
+                         MAT_UNIT, CODICE, MAT_IDENT, MAT_NAME, WP_IDENT, MAT_BATCH_MODE
+FROM            EXPORT_MOVIMENTI</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="REPPROD_NUMBER" DataSetColumn="REPPROD_NUMBER" />
+              <Mapping SourceColumn="PRODLINE_IDENT" DataSetColumn="PRODLINE_IDENT" />
+              <Mapping SourceColumn="RECIPE_IDENT" DataSetColumn="RECIPE_IDENT" />
+              <Mapping SourceColumn="RECIPE_NAME" DataSetColumn="RECIPE_NAME" />
+              <Mapping SourceColumn="PROD_SETPOINT" DataSetColumn="PROD_SETPOINT" />
+              <Mapping SourceColumn="PROD_ACTVALUE" DataSetColumn="PROD_ACTVALUE" />
+              <Mapping SourceColumn="SEQUENCE_NUMBER" DataSetColumn="SEQUENCE_NUMBER" />
+              <Mapping SourceColumn="BATCH_SETPOINT" DataSetColumn="BATCH_SETPOINT" />
+              <Mapping SourceColumn="BATCH_ACTVALUE" DataSetColumn="BATCH_ACTVALUE" />
+              <Mapping SourceColumn="BATCH_NUMBER" DataSetColumn="BATCH_NUMBER" />
+              <Mapping SourceColumn="PROD_ABORT" DataSetColumn="PROD_ABORT" />
+              <Mapping SourceColumn="BATCH_ABORT" DataSetColumn="BATCH_ABORT" />
+              <Mapping SourceColumn="MAT_ABORT" DataSetColumn="MAT_ABORT" />
+              <Mapping SourceColumn="MAT_START_DATE" DataSetColumn="MAT_START_DATE" />
+              <Mapping SourceColumn="MAT_END_DATE" DataSetColumn="MAT_END_DATE" />
+              <Mapping SourceColumn="MAT_SETPOINT" DataSetColumn="MAT_SETPOINT" />
+              <Mapping SourceColumn="MAT_ACTVALUE" DataSetColumn="MAT_ACTVALUE" />
+              <Mapping SourceColumn="MAT_UNIT" DataSetColumn="MAT_UNIT" />
+              <Mapping SourceColumn="CODICE" DataSetColumn="CODICE" />
+              <Mapping SourceColumn="MAT_IDENT" DataSetColumn="MAT_IDENT" />
+              <Mapping SourceColumn="MAT_NAME" DataSetColumn="MAT_NAME" />
+              <Mapping SourceColumn="WP_IDENT" DataSetColumn="WP_IDENT" />
+              <Mapping SourceColumn="MAT_BATCH_MODE" DataSetColumn="MAT_BATCH_MODE" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ProBatchDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ProBatchDataSet" msprop:Generator_UserDSName="ProBatchDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="V_MOVIMENTI" msprop:Generator_TableClassName="V_MOVIMENTIDataTable" msprop:Generator_TableVarName="tableV_MOVIMENTI" msprop:Generator_RowChangedName="V_MOVIMENTIRowChanged" msprop:Generator_TablePropName="V_MOVIMENTI" msprop:Generator_RowDeletingName="V_MOVIMENTIRowDeleting" msprop:Generator_RowChangingName="V_MOVIMENTIRowChanging" msprop:Generator_RowEvHandlerName="V_MOVIMENTIRowChangeEventHandler" msprop:Generator_RowDeletedName="V_MOVIMENTIRowDeleted" msprop:Generator_RowClassName="V_MOVIMENTIRow" msprop:Generator_UserTableName="V_MOVIMENTI" msprop:Generator_RowEvArgName="V_MOVIMENTIRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="REPPROD_NUMBER" msprop:Generator_ColumnVarNameInTable="columnREPPROD_NUMBER" msprop:Generator_ColumnPropNameInRow="REPPROD_NUMBER" msprop:Generator_ColumnPropNameInTable="REPPROD_NUMBERColumn" msprop:Generator_UserColumnName="REPPROD_NUMBER" type="xs:int" minOccurs="0" />
+              <xs:element name="PRODLINE_IDENT" msprop:Generator_ColumnVarNameInTable="columnPRODLINE_IDENT" msprop:Generator_ColumnPropNameInRow="PRODLINE_IDENT" msprop:Generator_ColumnPropNameInTable="PRODLINE_IDENTColumn" msprop:Generator_UserColumnName="PRODLINE_IDENT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RECIPE_IDENT" msprop:Generator_ColumnVarNameInTable="columnRECIPE_IDENT" msprop:Generator_ColumnPropNameInRow="RECIPE_IDENT" msprop:Generator_ColumnPropNameInTable="RECIPE_IDENTColumn" msprop:Generator_UserColumnName="RECIPE_IDENT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RECIPE_NAME" msprop:Generator_ColumnVarNameInTable="columnRECIPE_NAME" msprop:Generator_ColumnPropNameInRow="RECIPE_NAME" msprop:Generator_ColumnPropNameInTable="RECIPE_NAMEColumn" msprop:Generator_UserColumnName="RECIPE_NAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROD_SETPOINT" msprop:Generator_ColumnVarNameInTable="columnPROD_SETPOINT" msprop:Generator_ColumnPropNameInRow="PROD_SETPOINT" msprop:Generator_ColumnPropNameInTable="PROD_SETPOINTColumn" msprop:Generator_UserColumnName="PROD_SETPOINT" type="xs:double" minOccurs="0" />
+              <xs:element name="PROD_ACTVALUE" msprop:Generator_ColumnVarNameInTable="columnPROD_ACTVALUE" msprop:Generator_ColumnPropNameInRow="PROD_ACTVALUE" msprop:Generator_ColumnPropNameInTable="PROD_ACTVALUEColumn" msprop:Generator_UserColumnName="PROD_ACTVALUE" type="xs:double" minOccurs="0" />
+              <xs:element name="SEQUENCE_NUMBER" msprop:Generator_ColumnVarNameInTable="columnSEQUENCE_NUMBER" msprop:Generator_ColumnPropNameInRow="SEQUENCE_NUMBER" msprop:Generator_ColumnPropNameInTable="SEQUENCE_NUMBERColumn" msprop:Generator_UserColumnName="SEQUENCE_NUMBER" type="xs:int" minOccurs="0" />
+              <xs:element name="BATCH_SETPOINT" msprop:Generator_ColumnVarNameInTable="columnBATCH_SETPOINT" msprop:Generator_ColumnPropNameInRow="BATCH_SETPOINT" msprop:Generator_ColumnPropNameInTable="BATCH_SETPOINTColumn" msprop:Generator_UserColumnName="BATCH_SETPOINT" type="xs:double" minOccurs="0" />
+              <xs:element name="BATCH_ACTVALUE" msprop:Generator_ColumnVarNameInTable="columnBATCH_ACTVALUE" msprop:Generator_ColumnPropNameInRow="BATCH_ACTVALUE" msprop:Generator_ColumnPropNameInTable="BATCH_ACTVALUEColumn" msprop:Generator_UserColumnName="BATCH_ACTVALUE" type="xs:double" minOccurs="0" />
+              <xs:element name="BATCH_NUMBER" msprop:Generator_ColumnVarNameInTable="columnBATCH_NUMBER" msprop:Generator_ColumnPropNameInRow="BATCH_NUMBER" msprop:Generator_ColumnPropNameInTable="BATCH_NUMBERColumn" msprop:Generator_UserColumnName="BATCH_NUMBER" type="xs:short" minOccurs="0" />
+              <xs:element name="MAT_START_DATE" msprop:Generator_ColumnVarNameInTable="columnMAT_START_DATE" msprop:Generator_ColumnPropNameInRow="MAT_START_DATE" msprop:Generator_ColumnPropNameInTable="MAT_START_DATEColumn" msprop:Generator_UserColumnName="MAT_START_DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MAT_END_DATE" msprop:Generator_ColumnVarNameInTable="columnMAT_END_DATE" msprop:Generator_ColumnPropNameInRow="MAT_END_DATE" msprop:Generator_ColumnPropNameInTable="MAT_END_DATEColumn" msprop:Generator_UserColumnName="MAT_END_DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MAT_ABORT" msprop:Generator_ColumnVarNameInTable="columnMAT_ABORT" msprop:Generator_ColumnPropNameInRow="MAT_ABORT" msprop:Generator_ColumnPropNameInTable="MAT_ABORTColumn" msprop:Generator_UserColumnName="MAT_ABORT" type="xs:boolean" />
+              <xs:element name="MAT_SETPOINT" msprop:Generator_ColumnVarNameInTable="columnMAT_SETPOINT" msprop:Generator_ColumnPropNameInRow="MAT_SETPOINT" msprop:Generator_ColumnPropNameInTable="MAT_SETPOINTColumn" msprop:Generator_UserColumnName="MAT_SETPOINT" type="xs:double" minOccurs="0" />
+              <xs:element name="MAT_UNIT" msprop:Generator_ColumnVarNameInTable="columnMAT_UNIT" msprop:Generator_ColumnPropNameInRow="MAT_UNIT" msprop:Generator_ColumnPropNameInTable="MAT_UNITColumn" msprop:Generator_UserColumnName="MAT_UNIT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MAT_ACTVALUE" msprop:Generator_ColumnVarNameInTable="columnMAT_ACTVALUE" msprop:Generator_ColumnPropNameInRow="MAT_ACTVALUE" msprop:Generator_ColumnPropNameInTable="MAT_ACTVALUEColumn" msprop:Generator_UserColumnName="MAT_ACTVALUE" type="xs:double" minOccurs="0" />
+              <xs:element name="MAT_IDENT" msprop:Generator_ColumnVarNameInTable="columnMAT_IDENT" msprop:Generator_ColumnPropNameInRow="MAT_IDENT" msprop:Generator_ColumnPropNameInTable="MAT_IDENTColumn" msprop:Generator_UserColumnName="MAT_IDENT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MAT_NAME" msprop:Generator_ColumnVarNameInTable="columnMAT_NAME" msprop:Generator_ColumnPropNameInRow="MAT_NAME" msprop:Generator_ColumnPropNameInTable="MAT_NAMEColumn" msprop:Generator_UserColumnName="MAT_NAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MAT_BATCH_MODE" msprop:Generator_ColumnVarNameInTable="columnMAT_BATCH_MODE" msprop:Generator_ColumnPropNameInRow="MAT_BATCH_MODE" msprop:Generator_ColumnPropNameInTable="MAT_BATCH_MODEColumn" msprop:Generator_UserColumnName="MAT_BATCH_MODE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROD_ABORT" msprop:Generator_ColumnVarNameInTable="columnPROD_ABORT" msprop:Generator_ColumnPropNameInRow="PROD_ABORT" msprop:Generator_ColumnPropNameInTable="PROD_ABORTColumn" msprop:Generator_UserColumnName="PROD_ABORT" type="xs:boolean" minOccurs="0" />
+              <xs:element name="BATCH_ABORT" msprop:Generator_ColumnVarNameInTable="columnBATCH_ABORT" msprop:Generator_ColumnPropNameInRow="BATCH_ABORT" msprop:Generator_ColumnPropNameInTable="BATCH_ABORTColumn" msprop:Generator_UserColumnName="BATCH_ABORT" type="xs:boolean" minOccurs="0" />
+              <xs:element name="WP_IDENT" msprop:Generator_ColumnVarNameInTable="columnWP_IDENT" msprop:Generator_ColumnPropNameInRow="WP_IDENT" msprop:Generator_ColumnPropNameInTable="WP_IDENTColumn" msprop:Generator_UserColumnName="WP_IDENT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="EXPORT_MOVIMENTI" msprop:Generator_TableClassName="EXPORT_MOVIMENTIDataTable" msprop:Generator_TableVarName="tableEXPORT_MOVIMENTI" msprop:Generator_TablePropName="EXPORT_MOVIMENTI" msprop:Generator_RowDeletingName="EXPORT_MOVIMENTIRowDeleting" msprop:Generator_RowChangingName="EXPORT_MOVIMENTIRowChanging" msprop:Generator_RowEvHandlerName="EXPORT_MOVIMENTIRowChangeEventHandler" msprop:Generator_RowDeletedName="EXPORT_MOVIMENTIRowDeleted" msprop:Generator_UserTableName="EXPORT_MOVIMENTI" msprop:Generator_RowChangedName="EXPORT_MOVIMENTIRowChanged" msprop:Generator_RowEvArgName="EXPORT_MOVIMENTIRowChangeEvent" msprop:Generator_RowClassName="EXPORT_MOVIMENTIRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="REPPROD_NUMBER" msprop:Generator_ColumnVarNameInTable="columnREPPROD_NUMBER" msprop:Generator_ColumnPropNameInRow="REPPROD_NUMBER" msprop:Generator_ColumnPropNameInTable="REPPROD_NUMBERColumn" msprop:Generator_UserColumnName="REPPROD_NUMBER" type="xs:int" minOccurs="0" />
+              <xs:element name="PRODLINE_IDENT" msprop:Generator_ColumnVarNameInTable="columnPRODLINE_IDENT" msprop:Generator_ColumnPropNameInRow="PRODLINE_IDENT" msprop:Generator_ColumnPropNameInTable="PRODLINE_IDENTColumn" msprop:Generator_UserColumnName="PRODLINE_IDENT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RECIPE_IDENT" msprop:Generator_ColumnVarNameInTable="columnRECIPE_IDENT" msprop:Generator_ColumnPropNameInRow="RECIPE_IDENT" msprop:Generator_ColumnPropNameInTable="RECIPE_IDENTColumn" msprop:Generator_UserColumnName="RECIPE_IDENT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RECIPE_NAME" msprop:Generator_ColumnVarNameInTable="columnRECIPE_NAME" msprop:Generator_ColumnPropNameInRow="RECIPE_NAME" msprop:Generator_ColumnPropNameInTable="RECIPE_NAMEColumn" msprop:Generator_UserColumnName="RECIPE_NAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROD_SETPOINT" msprop:Generator_ColumnVarNameInTable="columnPROD_SETPOINT" msprop:Generator_ColumnPropNameInRow="PROD_SETPOINT" msprop:Generator_ColumnPropNameInTable="PROD_SETPOINTColumn" msprop:Generator_UserColumnName="PROD_SETPOINT" type="xs:double" minOccurs="0" />
+              <xs:element name="PROD_ACTVALUE" msprop:Generator_ColumnVarNameInTable="columnPROD_ACTVALUE" msprop:Generator_ColumnPropNameInRow="PROD_ACTVALUE" msprop:Generator_ColumnPropNameInTable="PROD_ACTVALUEColumn" msprop:Generator_UserColumnName="PROD_ACTVALUE" type="xs:double" minOccurs="0" />
+              <xs:element name="SEQUENCE_NUMBER" msprop:Generator_ColumnVarNameInTable="columnSEQUENCE_NUMBER" msprop:Generator_ColumnPropNameInRow="SEQUENCE_NUMBER" msprop:Generator_ColumnPropNameInTable="SEQUENCE_NUMBERColumn" msprop:Generator_UserColumnName="SEQUENCE_NUMBER" type="xs:int" minOccurs="0" />
+              <xs:element name="BATCH_SETPOINT" msprop:Generator_ColumnVarNameInTable="columnBATCH_SETPOINT" msprop:Generator_ColumnPropNameInRow="BATCH_SETPOINT" msprop:Generator_ColumnPropNameInTable="BATCH_SETPOINTColumn" msprop:Generator_UserColumnName="BATCH_SETPOINT" type="xs:double" minOccurs="0" />
+              <xs:element name="BATCH_ACTVALUE" msprop:Generator_ColumnVarNameInTable="columnBATCH_ACTVALUE" msprop:Generator_ColumnPropNameInRow="BATCH_ACTVALUE" msprop:Generator_ColumnPropNameInTable="BATCH_ACTVALUEColumn" msprop:Generator_UserColumnName="BATCH_ACTVALUE" type="xs:double" minOccurs="0" />
+              <xs:element name="BATCH_NUMBER" msprop:Generator_ColumnVarNameInTable="columnBATCH_NUMBER" msprop:Generator_ColumnPropNameInRow="BATCH_NUMBER" msprop:Generator_ColumnPropNameInTable="BATCH_NUMBERColumn" msprop:Generator_UserColumnName="BATCH_NUMBER" type="xs:short" minOccurs="0" />
+              <xs:element name="PROD_ABORT" msprop:Generator_ColumnVarNameInTable="columnPROD_ABORT" msprop:Generator_ColumnPropNameInRow="PROD_ABORT" msprop:Generator_ColumnPropNameInTable="PROD_ABORTColumn" msprop:Generator_UserColumnName="PROD_ABORT" type="xs:boolean" minOccurs="0" />
+              <xs:element name="BATCH_ABORT" msprop:Generator_ColumnVarNameInTable="columnBATCH_ABORT" msprop:Generator_ColumnPropNameInRow="BATCH_ABORT" msprop:Generator_ColumnPropNameInTable="BATCH_ABORTColumn" msprop:Generator_UserColumnName="BATCH_ABORT" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MAT_ABORT" msprop:Generator_ColumnVarNameInTable="columnMAT_ABORT" msprop:Generator_ColumnPropNameInRow="MAT_ABORT" msprop:Generator_ColumnPropNameInTable="MAT_ABORTColumn" msprop:Generator_UserColumnName="MAT_ABORT" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MAT_START_DATE" msprop:Generator_ColumnVarNameInTable="columnMAT_START_DATE" msprop:Generator_ColumnPropNameInRow="MAT_START_DATE" msprop:Generator_ColumnPropNameInTable="MAT_START_DATEColumn" msprop:Generator_UserColumnName="MAT_START_DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MAT_END_DATE" msprop:Generator_ColumnVarNameInTable="columnMAT_END_DATE" msprop:Generator_ColumnPropNameInRow="MAT_END_DATE" msprop:Generator_ColumnPropNameInTable="MAT_END_DATEColumn" msprop:Generator_UserColumnName="MAT_END_DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MAT_SETPOINT" msprop:Generator_ColumnVarNameInTable="columnMAT_SETPOINT" msprop:Generator_ColumnPropNameInRow="MAT_SETPOINT" msprop:Generator_ColumnPropNameInTable="MAT_SETPOINTColumn" msprop:Generator_UserColumnName="MAT_SETPOINT" type="xs:double" minOccurs="0" />
+              <xs:element name="MAT_ACTVALUE" msprop:Generator_ColumnVarNameInTable="columnMAT_ACTVALUE" msprop:Generator_ColumnPropNameInRow="MAT_ACTVALUE" msprop:Generator_ColumnPropNameInTable="MAT_ACTVALUEColumn" msprop:Generator_UserColumnName="MAT_ACTVALUE" type="xs:double" minOccurs="0" />
+              <xs:element name="MAT_UNIT" msprop:Generator_ColumnVarNameInTable="columnMAT_UNIT" msprop:Generator_ColumnPropNameInRow="MAT_UNIT" msprop:Generator_ColumnPropNameInTable="MAT_UNITColumn" msprop:Generator_UserColumnName="MAT_UNIT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODICE" msprop:Generator_ColumnVarNameInTable="columnCODICE" msprop:Generator_ColumnPropNameInRow="CODICE" msprop:Generator_ColumnPropNameInTable="CODICEColumn" msprop:Generator_UserColumnName="CODICE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MAT_IDENT" msprop:Generator_ColumnVarNameInTable="columnMAT_IDENT" msprop:Generator_ColumnPropNameInRow="MAT_IDENT" msprop:Generator_ColumnPropNameInTable="MAT_IDENTColumn" msprop:Generator_UserColumnName="MAT_IDENT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MAT_NAME" msprop:Generator_ColumnVarNameInTable="columnMAT_NAME" msprop:Generator_ColumnPropNameInRow="MAT_NAME" msprop:Generator_ColumnPropNameInTable="MAT_NAMEColumn" msprop:Generator_UserColumnName="MAT_NAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WP_IDENT" msprop:Generator_ColumnVarNameInTable="columnWP_IDENT" msprop:Generator_ColumnPropNameInRow="WP_IDENT" msprop:Generator_ColumnPropNameInTable="WP_IDENTColumn" msprop:Generator_UserColumnName="WP_IDENT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MAT_BATCH_MODE" msprop:Generator_ColumnVarNameInTable="columnMAT_BATCH_MODE" msprop:Generator_ColumnPropNameInRow="MAT_BATCH_MODE" msprop:Generator_ColumnPropNameInTable="MAT_BATCH_MODEColumn" msprop:Generator_UserColumnName="MAT_BATCH_MODE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
