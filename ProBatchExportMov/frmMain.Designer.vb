@@ -49,28 +49,28 @@ Partial Class frmMain
         Me._840002R1DataSet1 = New ProBatchExportMov._840002R1DataSet()
         Me.V_GET_MOVTableAdapter1 = New ProBatchExportMov._840002R1DataSetTableAdapters.V_GET_MOVTableAdapter()
         Me.V_GET_MOV_COMPACTTableAdapter1 = New ProBatchExportMov._840002R1DataSetTableAdapters.V_GET_MOV_COMPACTTableAdapter()
-        Me.Panel1.SuspendLayout()
-        Me.Panel4.SuspendLayout()
-        Me.Panel2.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel3.SuspendLayout()
-        CType(Me._840002R1DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SuspendLayout()
+        Me.Panel1.SuspendLayout
+        Me.Panel4.SuspendLayout
+        Me.Panel2.SuspendLayout
+        CType(Me.DataGridView1,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.Panel3.SuspendLayout
+        CType(Me._840002R1DataSet1,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.SuspendLayout
         '
         'BTN_EXIT
         '
-        Me.BTN_EXIT.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BTN_EXIT.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_EXIT.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
+        Me.BTN_EXIT.Font = New System.Drawing.Font("Microsoft Sans Serif", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.BTN_EXIT.Location = New System.Drawing.Point(1103, 16)
         Me.BTN_EXIT.Name = "BTN_EXIT"
         Me.BTN_EXIT.Size = New System.Drawing.Size(114, 38)
         Me.BTN_EXIT.TabIndex = 0
         Me.BTN_EXIT.Text = "Exit"
-        Me.BTN_EXIT.UseVisualStyleBackColor = True
+        Me.BTN_EXIT.UseVisualStyleBackColor = true
         '
         'DT1
         '
-        Me.DT1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DT1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.DT1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.DT1.Location = New System.Drawing.Point(143, 27)
         Me.DT1.Name = "DT1"
@@ -79,7 +79,7 @@ Partial Class frmMain
         '
         'Label1
         '
-        Me.Label1.AutoSize = True
+        Me.Label1.AutoSize = true
         Me.Label1.Location = New System.Drawing.Point(9, 7)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(80, 13)
@@ -88,14 +88,14 @@ Partial Class frmMain
         '
         'BTN_EXPORT
         '
-        Me.BTN_EXPORT.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BTN_EXPORT.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_EXPORT.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
+        Me.BTN_EXPORT.Font = New System.Drawing.Font("Microsoft Sans Serif", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.BTN_EXPORT.Location = New System.Drawing.Point(983, 16)
         Me.BTN_EXPORT.Name = "BTN_EXPORT"
         Me.BTN_EXPORT.Size = New System.Drawing.Size(114, 38)
         Me.BTN_EXPORT.TabIndex = 3
         Me.BTN_EXPORT.Text = "Export"
-        Me.BTN_EXPORT.UseVisualStyleBackColor = True
+        Me.BTN_EXPORT.UseVisualStyleBackColor = true
         '
         'Panel1
         '
@@ -118,7 +118,7 @@ Partial Class frmMain
         '
         'Label5
         '
-        Me.Label5.AutoSize = True
+        Me.Label5.AutoSize = true
         Me.Label5.Location = New System.Drawing.Point(825, 7)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(117, 13)
@@ -136,49 +136,49 @@ Partial Class frmMain
         '
         'i_AggregationType_1
         '
-        Me.i_AggregationType_1.AutoSize = True
+        Me.i_AggregationType_1.AutoSize = true
         Me.i_AggregationType_1.Location = New System.Drawing.Point(3, 26)
         Me.i_AggregationType_1.Name = "i_AggregationType_1"
         Me.i_AggregationType_1.Size = New System.Drawing.Size(110, 17)
         Me.i_AggregationType_1.TabIndex = 11
         Me.i_AggregationType_1.Text = "MATERIA PRIMA"
-        Me.i_AggregationType_1.UseVisualStyleBackColor = True
+        Me.i_AggregationType_1.UseVisualStyleBackColor = true
         '
         'i_AggregationType_0
         '
-        Me.i_AggregationType_0.AutoSize = True
-        Me.i_AggregationType_0.Checked = True
+        Me.i_AggregationType_0.AutoSize = true
+        Me.i_AggregationType_0.Checked = true
         Me.i_AggregationType_0.Location = New System.Drawing.Point(3, 3)
         Me.i_AggregationType_0.Name = "i_AggregationType_0"
         Me.i_AggregationType_0.Size = New System.Drawing.Size(204, 17)
         Me.i_AggregationType_0.TabIndex = 10
-        Me.i_AggregationType_0.TabStop = True
+        Me.i_AggregationType_0.TabStop = true
         Me.i_AggregationType_0.Text = "RICETTA\CODICE MATERIA PRIMA"
-        Me.i_AggregationType_0.UseVisualStyleBackColor = True
+        Me.i_AggregationType_0.UseVisualStyleBackColor = true
         '
         'f_DeleteBefore
         '
-        Me.f_DeleteBefore.AutoSize = True
+        Me.f_DeleteBefore.AutoSize = true
         Me.f_DeleteBefore.Location = New System.Drawing.Point(501, 52)
         Me.f_DeleteBefore.Name = "f_DeleteBefore"
         Me.f_DeleteBefore.Size = New System.Drawing.Size(217, 17)
         Me.f_DeleteBefore.TabIndex = 9
         Me.f_DeleteBefore.Text = "Elimino i dati prima di eseguire l'EXPORT"
-        Me.f_DeleteBefore.UseVisualStyleBackColor = True
+        Me.f_DeleteBefore.UseVisualStyleBackColor = true
         '
         'f_Compatta
         '
-        Me.f_Compatta.AutoSize = True
+        Me.f_Compatta.AutoSize = true
         Me.f_Compatta.Location = New System.Drawing.Point(501, 29)
         Me.f_Compatta.Name = "f_Compatta"
         Me.f_Compatta.Size = New System.Drawing.Size(270, 17)
         Me.f_Compatta.TabIndex = 8
         Me.f_Compatta.Text = "Compatta i movimenti per data\codice materia prima"
-        Me.f_Compatta.UseVisualStyleBackColor = True
+        Me.f_Compatta.UseVisualStyleBackColor = true
         '
         'Label4
         '
-        Me.Label4.AutoSize = True
+        Me.Label4.AutoSize = true
         Me.Label4.Location = New System.Drawing.Point(302, 7)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(50, 13)
@@ -187,7 +187,7 @@ Partial Class frmMain
         '
         'Label3
         '
-        Me.Label3.AutoSize = True
+        Me.Label3.AutoSize = true
         Me.Label3.Location = New System.Drawing.Point(140, 9)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(56, 13)
@@ -196,7 +196,7 @@ Partial Class frmMain
         '
         'DT2
         '
-        Me.DT2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DT2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.DT2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.DT2.Location = New System.Drawing.Point(305, 27)
         Me.DT2.Name = "DT2"
@@ -205,7 +205,7 @@ Partial Class frmMain
         '
         'NR_MOV
         '
-        Me.NR_MOV.AutoSize = True
+        Me.NR_MOV.AutoSize = true
         Me.NR_MOV.Location = New System.Drawing.Point(54, 43)
         Me.NR_MOV.Name = "NR_MOV"
         Me.NR_MOV.Size = New System.Drawing.Size(13, 13)
@@ -214,7 +214,7 @@ Partial Class frmMain
         '
         'Label2
         '
-        Me.Label2.AutoSize = True
+        Me.Label2.AutoSize = true
         Me.Label2.Location = New System.Drawing.Point(27, 27)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(71, 13)
@@ -232,16 +232,16 @@ Partial Class frmMain
         '
         'DataGridView1
         '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridView1.AllowUserToAddRows = false
+        Me.DataGridView1.AllowUserToDeleteRows = false
+        Me.DataGridView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom)  _
+            Or System.Windows.Forms.AnchorStyles.Left)  _
+            Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(12, 100)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(1205, 532)
+        Me.DataGridView1.ReadOnly = true
+        Me.DataGridView1.Size = New System.Drawing.Size(602, 532)
         Me.DataGridView1.TabIndex = 1
         '
         'Panel3
@@ -260,19 +260,19 @@ Partial Class frmMain
         '
         'Button1
         '
-        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left),System.Windows.Forms.AnchorStyles)
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Button1.Location = New System.Drawing.Point(143, 16)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(237, 38)
         Me.Button1.TabIndex = 9
         Me.Button1.Text = "Test connessione database"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = true
         '
         'DB_DEST
         '
-        Me.DB_DEST.AutoSize = True
-        Me.DB_DEST.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DB_DEST.AutoSize = true
+        Me.DB_DEST.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.DB_DEST.Location = New System.Drawing.Point(386, 40)
         Me.DB_DEST.Name = "DB_DEST"
         Me.DB_DEST.Size = New System.Drawing.Size(198, 24)
@@ -281,8 +281,8 @@ Partial Class frmMain
         '
         'DB_ORIGINE
         '
-        Me.DB_ORIGINE.AutoSize = True
-        Me.DB_ORIGINE.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DB_ORIGINE.AutoSize = true
+        Me.DB_ORIGINE.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.DB_ORIGINE.Location = New System.Drawing.Point(386, 11)
         Me.DB_ORIGINE.Name = "DB_ORIGINE"
         Me.DB_ORIGINE.Size = New System.Drawing.Size(185, 24)
@@ -291,18 +291,18 @@ Partial Class frmMain
         '
         'BTN_READ
         '
-        Me.BTN_READ.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.BTN_READ.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_READ.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left),System.Windows.Forms.AnchorStyles)
+        Me.BTN_READ.Font = New System.Drawing.Font("Microsoft Sans Serif", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.BTN_READ.Location = New System.Drawing.Point(12, 16)
         Me.BTN_READ.Name = "BTN_READ"
         Me.BTN_READ.Size = New System.Drawing.Size(114, 38)
         Me.BTN_READ.TabIndex = 4
         Me.BTN_READ.Text = "Read"
-        Me.BTN_READ.UseVisualStyleBackColor = True
+        Me.BTN_READ.UseVisualStyleBackColor = true
         '
         'ExporT_MOVIMENTITableAdapter1
         '
-        Me.ExporT_MOVIMENTITableAdapter1.ClearBeforeFill = True
+        Me.ExporT_MOVIMENTITableAdapter1.ClearBeforeFill = true
         '
         '_840002R1DataSet1
         '
@@ -311,15 +311,15 @@ Partial Class frmMain
         '
         'V_GET_MOVTableAdapter1
         '
-        Me.V_GET_MOVTableAdapter1.ClearBeforeFill = True
+        Me.V_GET_MOVTableAdapter1.ClearBeforeFill = true
         '
         'V_GET_MOV_COMPACTTableAdapter1
         '
-        Me.V_GET_MOV_COMPACTTableAdapter1.ClearBeforeFill = True
+        Me.V_GET_MOV_COMPACTTableAdapter1.ClearBeforeFill = true
         '
         'frmMain
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1229, 727)
         Me.Controls.Add(Me.Panel3)
@@ -327,18 +327,18 @@ Partial Class frmMain
         Me.Controls.Add(Me.Panel2)
         Me.Name = "frmMain"
         Me.Text = "Export movimenti Probatch"
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
-        Me.Panel4.ResumeLayout(False)
-        Me.Panel4.PerformLayout()
-        Me.Panel2.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel3.ResumeLayout(False)
-        Me.Panel3.PerformLayout()
-        CType(Me._840002R1DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ResumeLayout(False)
+        Me.Panel1.ResumeLayout(false)
+        Me.Panel1.PerformLayout
+        Me.Panel4.ResumeLayout(false)
+        Me.Panel4.PerformLayout
+        Me.Panel2.ResumeLayout(false)
+        CType(Me.DataGridView1,System.ComponentModel.ISupportInitialize).EndInit
+        Me.Panel3.ResumeLayout(false)
+        Me.Panel3.PerformLayout
+        CType(Me._840002R1DataSet1,System.ComponentModel.ISupportInitialize).EndInit
+        Me.ResumeLayout(false)
 
-    End Sub
+End Sub
 
     Friend WithEvents BTN_EXIT As Button
     Friend WithEvents DT1 As DateTimePicker

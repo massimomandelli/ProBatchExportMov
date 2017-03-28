@@ -12,8 +12,8 @@ Public Class frmMain
 
     Dim [PRODLINE_IDENT] As String = "LP1"
 
-    Dim c_CAR As String="ZSCA"
-    Dim c_SCA As String ="ZCAR"
+    Dim c_CAR As String = "ZSCA"
+    Dim c_SCA As String = "ZCAR"
 
     Private Sub TEST_connection()
 
@@ -56,26 +56,13 @@ Public Class frmMain
         End Try
 
         Try
-
-
-           
-
-
-
             DB = New ClassDatabase(My.Settings.ConnectionString)
 
             '            _840002C1 = New ClassDatabase(My.Settings._840002C1ConnectionString)
             '           _840002P1 = New ClassDatabase(My.Settings._840002P1ConnectionString)
             _840002R1 = New ClassDatabase(My.Settings._840002R1ConnectionString)
 
-
-
-
-
             TEST_connection()
-
-
-
 
             DT1.Value = Now
             DT2.Value = Now
@@ -282,9 +269,7 @@ Public Class frmMain
     End Sub
     Private Sub SAVE_Settings()
         Try
-
             My.Settings.i_AggregationType = i_AggregationType
-
             My.Settings.f_Compatta = Me.f_Compatta.Checked
             My.Settings.f_DeleteBefore = Me.f_DeleteBefore.Checked
             My.Settings.Save()
@@ -295,7 +280,12 @@ Public Class frmMain
 
 
     Private Sub DT1_ValueChanged(sender As Object, e As EventArgs) Handles DT1.ValueChanged
-        DT2.Value = DT1.Value
+        Try
+            DT2.Value = DT1.Value
+        Catch ex As Exception
+
+        End Try
+        
     End Sub
 
     Private Sub BTN_EXPORT_Click(sender As Object, e As EventArgs) Handles BTN_EXPORT.Click
@@ -391,16 +381,8 @@ Public Class frmMain
                             Catch ex As Exception
                                 Debug.Print(ex.Message)
                             End Try
-
-
-
-
                         Next
-
                 End Select
-
-
-
             Else
 
 
@@ -408,16 +390,12 @@ Public Class frmMain
 
             Dim EXPORT_MOVIMENTI As DataTable = DB.GetDataTable("select * from [EXPORT_MOVIMENTI]")
             If Not EXPORT_MOVIMENTI Is Nothing Then
-
                 MsgBox(String.Format("Export terminato, sono presenti {0} movimenti", EXPORT_MOVIMENTI.Rows.Count.ToString.Trim))
                 Return True
             Else
                 MsgBox("Export fallito")
-
                 Return False
             End If
-
-
 
         Catch ex As Exception
             Return False
