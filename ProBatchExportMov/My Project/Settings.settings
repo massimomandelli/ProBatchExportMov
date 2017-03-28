@@ -43,5 +43,11 @@
     <Setting Name="i_AggregationType" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
+    <Setting Name="c_SCA" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ZSCA</Value>
+    </Setting>
+    <Setting Name="c_CAR" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ZCAR</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

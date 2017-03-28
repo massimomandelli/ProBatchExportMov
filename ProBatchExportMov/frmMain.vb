@@ -12,7 +12,8 @@ Public Class frmMain
 
     Dim [PRODLINE_IDENT] As String = "LP1"
 
-
+    Dim c_CAR As String="ZSCA"
+    Dim c_SCA As String ="ZCAR"
 
     Private Sub TEST_connection()
 
@@ -48,6 +49,18 @@ Public Class frmMain
     End Sub
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
+             c_CAR =My.Settings.c_CAR 
+            c_SCA =My.Settings.c_SCA   
+        Catch ex As Exception
+
+        End Try
+
+        Try
+
+
+           
+
+
 
             DB = New ClassDatabase(My.Settings.ConnectionString)
 
@@ -199,7 +212,7 @@ Public Class frmMain
             Dim strText As String = String.Empty & vbCrLf
             strText = "SELECT   LEFT(REPORT_MATERIAL.MAT_START_DATE, 11) AS MAT_START_DATE,[RECIPE_IDENT], round(SUM(REPORT_MATERIAL.MAT_SETPOINT),3) AS MAT_SETPOINT, " & vbCrLf
             strText = strText & "         round(SUM(REPORT_MATERIAL.MAT_ACTVALUE),3) AS MAT_ACTVALUE,MAX(REPORT_MATERIAL.MAT_UNIT) AS MAT_UNIT, REPORT_MATERIAL.MAT_IDENT, " & vbCrLf
-            strText = strText & "         MAX(REPORT_MATERIAL.MAT_NAME) AS MAT_NAME, REPORT_MATERIAL.MAT_BATCH_MODE,§SCA§ as causale" & vbCrLf
+            strText = strText & "         MAX(REPORT_MATERIAL.MAT_NAME) AS MAT_NAME, REPORT_MATERIAL.MAT_BATCH_MODE,§"+c_SCA +"§ as causale" & vbCrLf
             strText = strText & "FROM     ((REPORT_BATCH RIGHT OUTER JOIN" & vbCrLf
             strText = strText & "         REPORT_MATERIAL ON REPORT_BATCH.REPBATCH_NUMBER = REPORT_MATERIAL.REPBATCH_NUMBER) LEFT OUTER JOIN" & vbCrLf
             strText = strText & "         REPORT_PRODUCTION ON REPORT_BATCH.REPPROD_NUMBER = REPORT_PRODUCTION.REPPROD_NUMBER)" & vbCrLf
@@ -211,7 +224,7 @@ Public Class frmMain
             strText = strText & "		 RECIPE_IDENT, " & vbCrLf
             strText = strText & "		 round(sum(BATCH_SETPOINT),3) as BATCH_SETPOINT, round(sum(BATCH_ACTVALUE),3) as BATCH_ACTVALUE , " & vbCrLf
             strText = strText & "		 max(BATCH_UNIT) as BATCH_UNIT" & vbCrLf
-            strText = strText & "		 ,§§ as MAT_IDENT,§§ as MAT_NAME,§§ as MAT_BATCH_MODE, §CAR§ as causale" & vbCrLf
+            strText = strText & "		 ,§§ as MAT_IDENT,§§ as MAT_NAME,§§ as MAT_BATCH_MODE, §" +c_CAR  +"§ as causale" & vbCrLf
             strText = strText & "FROM   REPORT_BATCH LEFT OUTER JOIN" & vbCrLf
             strText = strText & "       REPORT_PRODUCTION ON REPORT_BATCH.REPPROD_NUMBER = REPORT_PRODUCTION.REPPROD_NUMBER" & vbCrLf
             strText = strText & "WHERE  Not LEFT(BATCH_START_DATE, 11) Is null  And (BATCH_START_DATE BETWEEN " + m_SEP + mDT1.ToString(m_DATA_FORMAT) + " 00:00:00" + m_SEP + " AND " + m_SEP + mDT2.ToString(m_DATA_FORMAT) + " 23:59:59" + m_SEP + ")" & vbCrLf
@@ -321,7 +334,7 @@ Public Class frmMain
 
 
 
-                            If r("CAUSALE") = "SCA" Then
+                            If r("CAUSALE") = c_SCA  Then
 
                                 'righe dettaglio
 
@@ -373,7 +386,7 @@ Public Class frmMain
 
                             End If
                             Try
-                                Dim SQL As String = String.Format("INSERT INTO [EXPORT_MOVIMENTI] (MAT_START_DATE, MAT_IDENT, MAT_NAME, MAT_ACTVALUE, MAT_BATCH_MODE,MAT_SETPOINT,MAT_UNIT,CODICE,CAUSALE) VALUES (§{0}§,§{1}§,§{2}§,{3},§{4}§,{5},§{6}§,§{7}§,§{8}§)", r.MAT_START_DATE, r.MAT_IDENT, r.MAT_NAME, Replace(r.MAT_ACTVALUE, ",", "."), r.MAT_BATCH_MODE, Replace(r.MAT_SETPOINT, ",", "."), r.MAT_UNIT, tmp_MAT_IDENT, "SCA")
+                                Dim SQL As String = String.Format("INSERT INTO [EXPORT_MOVIMENTI] (MAT_START_DATE, MAT_IDENT, MAT_NAME, MAT_ACTVALUE, MAT_BATCH_MODE,MAT_SETPOINT,MAT_UNIT,CODICE,CAUSALE) VALUES (§{0}§,§{1}§,§{2}§,{3},§{4}§,{5},§{6}§,§{7}§,§{8}§)", r.MAT_START_DATE, r.MAT_IDENT, r.MAT_NAME, Replace(r.MAT_ACTVALUE, ",", "."), r.MAT_BATCH_MODE, Replace(r.MAT_SETPOINT, ",", "."), r.MAT_UNIT, tmp_MAT_IDENT, c_SCA )
                                 DB.ExecSql(SQL)
                             Catch ex As Exception
                                 Debug.Print(ex.Message)

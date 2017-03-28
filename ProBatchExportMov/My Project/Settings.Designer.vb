@@ -135,6 +135,30 @@ Namespace My
                 Me("i_AggregationType") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("ZSCA")>  _
+        Public Property c_SCA() As String
+            Get
+                Return CType(Me("c_SCA"),String)
+            End Get
+            Set
+                Me("c_SCA") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("ZCAR")>  _
+        Public Property c_CAR() As String
+            Get
+                Return CType(Me("c_CAR"),String)
+            End Get
+            Set
+                Me("c_CAR") = value
+            End Set
+        End Property
     End Class
 End Namespace
 
